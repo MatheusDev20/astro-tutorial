@@ -1,0 +1,24 @@
+---
+import { layout, spacing, typography } from "../core/design";
+
+const { title, subtitle, cta } = Astro.props;
+---
+
+<section class={spacing.section}>
+  <div class={layout.container}>
+    <h1 class={typography.h1}>{title}</h1>
+
+    {subtitle && (
+      <p class="mt-6 border border-e-rose-50 max-w-xl text-lg text-neutral-400">
+        {subtitle}
+      </p>
+    )}
+
+    <a
+      href="#cta"
+      class="inline-block mt-10 rounded-md bg-white text-black px-6 py-3 font-medium"
+    >
+      {cta}
+    </a>
+  </div>
+</section>
